@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Modern Save and Discard Buttons',
-    'version': '18.0.1.0.0',
+    'version': '19.0.1.0.0',
     'category': 'Extra Tools',
     'summary': 'Show clear Save and Discard buttons on Odoo form views',
     'description': """
