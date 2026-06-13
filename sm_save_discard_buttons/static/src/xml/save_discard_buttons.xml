@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="sm_save_discard_buttons.FormStatusIndicator" t-inherit="web.FormStatusIndicator" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('o_form_status_indicator_buttons')]" position="attributes">
+            <attribute name="class" add="o_sm_save_discard_group" separator=" "/>
+        </xpath>
+        <xpath expr="//button[hasclass('o_form_button_save')]" position="replace">
+            <button type="button"
+                    class="o_form_button_save o_sm_save_discard_btn o_sm_save_btn"
+                    data-hotkey="s"
+                    t-on-click.stop="save"
+                    data-tooltip="Save manually"
+                    aria-label="Save manually"
+                    t-ref="save">
+                <i class="fa fa-check"/>
+                <span>Save</span>
+            </button>
+        </xpath>
+        <xpath expr="//button[hasclass('o_form_button_cancel')]" position="replace">
+            <button type="button"
+                    class="o_form_button_cancel o_sm_save_discard_btn o_sm_discard_btn"
+                    data-hotkey="j"
+                    t-on-click.stop="discard"
+                    data-tooltip="Discard all changes"
+                    aria-label="Discard all changes">
+                <i class="fa fa-times"/>
+                <span>Discard</span>
+            </button>
+        </xpath>
+    </t>
+
+    <t t-name="sm_save_discard_buttons.FormViewButtons" t-inherit="web.FormView.Buttons" t-inherit-mode="extension">
+        <xpath expr="//button[hasclass('o_form_button_save')]" position="replace">
+            <button type="button" class="btn o_form_button_save o_sm_save_discard_btn o_sm_save_btn" data-hotkey="s" t-on-click.stop="() => this.saveButtonClicked({closable: true})">
+                <i class="fa fa-check"/>
+                <span>Save</span>
+            </button>
+        </xpath>
+        <xpath expr="//button[hasclass('o_form_button_cancel')]" position="replace">
+            <button type="button" class="btn o_form_button_cancel o_sm_save_discard_btn o_sm_discard_btn" data-hotkey="j" t-on-click.stop="discard">
+                <i class="fa fa-times"/>
+                <span>Discard</span>
+            </button>
+        </xpath>
+    </t>
+</templates>

@@ -1,0 +1,78 @@
+.o_form_status_indicator_buttons.o_sm_save_discard_group {
+    gap: 6px;
+    align-items: center;
+}
+
+.o_sm_save_discard_btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-height: 32px;
+    padding: 0 12px !important;
+    border-radius: 6px !important;
+    border: 1px solid transparent !important;
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+
+    .fa {
+        font-size: 0.86rem;
+    }
+
+    &:disabled {
+        opacity: 0.45;
+        cursor: not-allowed;
+        box-shadow: none;
+    }
+}
+
+.o_sm_save_btn {
+    background-color: rgba(20, 184, 166, 0.14) !important;
+    border-color: rgba(20, 184, 166, 0.34) !important;
+    color: #0f766e !important;
+
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+        background-color: rgba(20, 184, 166, 0.24) !important;
+        border-color: rgba(20, 184, 166, 0.52) !important;
+        color: #0f5f59 !important;
+        box-shadow: 0 0 0 2px rgba(20, 184, 166, 0.14);
+    }
+}
+
+.o_sm_discard_btn {
+    background-color: rgba(244, 63, 94, 0.1) !important;
+    border-color: rgba(244, 63, 94, 0.28) !important;
+    color: #be123c !important;
+
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+        background-color: rgba(244, 63, 94, 0.18) !important;
+        border-color: rgba(244, 63, 94, 0.45) !important;
+        color: #9f1239 !important;
+        box-shadow: 0 0 0 2px rgba(244, 63, 94, 0.12);
+    }
+}
+
+.modal-footer .o_sm_save_discard_btn,
+footer .o_sm_save_discard_btn {
+    min-height: 36px;
+    padding: 0 14px !important;
+}
+
+html[data-color-scheme="dark"] {
+    .o_sm_save_btn {
+        background-color: rgba(20, 184, 166, 0.24) !important;
+        border-color: rgba(45, 212, 191, 0.38) !important;
+        color: #5eead4 !important;
+    }
+
+    .o_sm_discard_btn {
+        background-color: rgba(244, 63, 94, 0.2) !important;
+        border-color: rgba(251, 113, 133, 0.38) !important;
+        color: #fda4af !important;
+    }
+}
